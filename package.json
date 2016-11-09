@@ -1,0 +1,12 @@
+{
+  "name": "neo4j-javascript-driver-definitions",
+  "version": "0.1.0",
+  "description": "Typescript definitions for neo4j-javascript-driver",
+  "main": "index.d.ts",
+  "repository": {
+    "url": "https://github.com/ngasst/neo4j-javascript-driver.git",
+    "type": "git"
+  },
+  "author": "Gaston Ndanyuzwe <gaston.ndanyuzwe@infiniteacacia.com\"",
+  "license": "MIT"
+}
