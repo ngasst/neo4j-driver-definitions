@@ -1,1 +1,0 @@
-export { Path, PathSegment } from 'neo4j-driver/src/v1/graph-types.js';

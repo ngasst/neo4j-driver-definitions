@@ -1,0 +1,1 @@
+export declare function debug(val: any): void;

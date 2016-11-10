@@ -1,10 +1,8 @@
 export { Driver } from './driver';
 export { Session } from './session';
-export { Node } from './node';
-export { Relationship } from './relationship';
-export { Path, PathSegment } from './path';
+export { Node, Relationship, UnboundRelationship, Path, PathSegment } from './graph-types';
 export { Record } from './record';
 export { Neo4jError } from './error';
 export { Result } from './result';
 export { ResultSummary } from './result-summary';
-export { Statement } from './statement';
+export { Transaction } from './transaction';

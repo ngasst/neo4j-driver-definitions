@@ -9,7 +9,7 @@ import { Promise } from 'es6-promise';
 export declare  class Result {
     /**
      * Inject the observer to be used.
-     * @constructor
+     * @constructors
      * @access private
      * @param {StreamObserver} streamObserver
      * @param {mixed} statement - Cypher statement to execute
