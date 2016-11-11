@@ -1,15 +1,25 @@
 {
   "name": "neo4j-javascript-driver-definitions",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Typescript definitions for neo4j-javascript-driver",
   "main": "index.d.ts",
   "repository": {
     "url": "https://github.com/ngasst/neo4j-javascript-driver.git",
     "type": "git"
   },
+  "scripts": {
+    "bump:patch": "node ./node_modules/node-bumper/build/index patch --git",
+    "bump:patch:pub": "node ./node_modules/node-bumper/build/index patch --git --npm",
+    "bump:minor": "node ./node_modules/node-bumper/build/index minor --git",
+    "bump:minor:pub": "node ./node_modules/node-bumper/build/index minor --git --npm",
+    "bump:major": "node ./node_modules/node-bumper/build/index major --git",
+    "bump:major:pub": "node ./node_modules/node-bumper/build/index major --git --npm",
+    "tsnode": "node ./node_modules/ts-node/dist/index"
+  },
   "author": "Gaston Ndanyuzwe <gaston.ndanyuzwe@infiniteacacia.com\"",
   "license": "MIT",
   "dependencies": {
-    "@types/es6-promise": "^0.0.32"
+    "@types/es6-promise": "^0.0.32",
+    "node-bumper": "^0.1.26"
   }
 }
