@@ -1,6 +1,6 @@
 {
   "name": "neo4j-javascript-driver-definitions",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "Typescript definitions for neo4j-javascript-driver",
   "main": "index.d.ts",
   "repository": {
