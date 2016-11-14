@@ -7,6 +7,11 @@ import { Promise } from 'es6-promise';
   * @access public
   */
 export declare  class Result {
+  _streamObserver: StreamObserver;
+  _p: any;
+  _statement: any;
+  _parameters: any;
+  _metaSupplier: () => any;
     /**
      * Inject the observer to be used.
      * @constructors
@@ -22,7 +27,7 @@ export declare  class Result {
      * @return {Promise} new Promise.
      * @access private
      */
-    _createPromise(): Promise<any>;
+    protected _createPromise(): Promise<any>;
 
     /**
      * Waits for all results and calls the passed in function with the results.
@@ -52,5 +57,6 @@ export declare  class Result {
      * @param {function(error: {message:string, code:string})} observer.onError - Handle errors.
      * @return
      */
-
+		
+    subscribe(observer: Observer): Subscription
 }

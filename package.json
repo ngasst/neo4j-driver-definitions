@@ -18,8 +18,23 @@
   },
   "author": "Gaston Ndanyuzwe <gaston.ndanyuzwe@infiniteacacia.com\"",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
+    "@types/chalk": "^0.4.31",
     "@types/es6-promise": "^0.0.32",
-    "node-bumper": "^0.1.26"
+    "@types/fs-extra": "0.0.34",
+    "@types/node": "^6.0.46",
+    "chalk": "^1.1.3",
+    "fs-extra": "^0.30.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-4.0.build": "^4.0.0-build.a271520",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-util": "^3.0.7",
+    "node-bumper": "^0.1.26",
+    "source-map-support": "^0.4.5",
+    "ts-loader": "^0.9.5",
+    "typescript": "^2.0.6",
+    "webpack": "2.1.0-beta.20",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.12.2"
   }
 }
