@@ -10,15 +10,19 @@ const $ = require("gulp-load-plugins")();
 // Public Tasks
 gulp.task("clean:server", cb => rimraf("./build", cb));
 gulp.task("clean", gulp.parallel("clean:server"));
-gulp.task("copy:dt", () => {
-	return $.watch(['index.d.ts', 'neo4j-driver-tests.ts'])
-			.pipe(gulp.dest('../DefinitelyTyped/neo4j-driver'));
+gulp.task("copy", () => {
+	 return gulp.watch(['index.d.ts', 'neo4j-driver-tests.ts'], gulp.series('copy:pers', 'copy:dt'), (event) => {
+		 $.util.log(`[${event.path}] changed!`);
+	 });
 });
 gulp.task("copy:pers", () => {
-	return $.watch(['index.d.ts', 'neo4j-driver-tests.ts'])
+	return gulp.src(['index.d.ts', 'neo4j-driver-tests.ts'])
 			.pipe(gulp.dest('../neo-persistor/node_modules/@types/neo4j-driver'));
 });
-gulp.task("copy", gulp.parallel("copy:dt", "copy:pers"))
+gulp.task("copy:dt", () => {
+	return gulp.src(['index.d.ts', 'neo4j-driver-tests.ts'])
+				.pipe(gulp.dest('../DefinitelyTyped/neo4j-driver'));
+});
 
 gulp.task("dev:server", gulp.series("clean:server", devServerBuild));
 gulp.task("dev:watch", gulp

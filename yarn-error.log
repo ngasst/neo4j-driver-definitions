@@ -1,14 +1,14 @@
 Arguments: 
-  C:\Applic\Ide\Netbeans\nodejs\node.exe C:\Applic\Ide\Netbeans\nodejs\node_modules\yarn\bin\yarn.js add gulp-watch --dev
+  C:\Program Files\nodejs\node.exe C:\Users\ndany\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
 
 PATH: 
-  C:\Applic\Ide\Netbeans\git\mingw64\bin;C:\Applic\Ide\Netbeans\git\usr\bin;U:\bin;U:\bin;C:\Applic\Ide\Netbeans\git\mingw64\bin;C:\Applic\Ide\Netbeans\git\usr\local\bin;C:\Applic\Ide\Netbeans\git\usr\bin;C:\Applic\Ide\Netbeans\git\usr\bin;C:\Applic\Ide\Netbeans\git\mingw64\bin;C:\Applic\Ide\Netbeans\git\usr\bin;U:\bin;C:\ProgramData\Oracle\Java\javapath;C:\Applic\Oracle\product\11.2.0\client_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Enterprise Vault\EVClient;C:\ProgramData\Oracle\Java\javapath;C:\Applic\Oracle\product\11.2.0\client_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Enterprise Vault\EVClient;C:\Applic\Ide\Netbeans\Go\bin;C:\Applic\Ide\Netbeans\git\usr\bin;C:\Applic\Ide\Netbeans\gocode\bin;C:\Users\ndanyuzwe.g\Desktop\gcc-tdm\bin;C:\Applic\Ide\Netbeans\MinGW\bin;C:\Applic\Ide\Netbeans\nodejs;C:\Applic\Ide\Netbeans\npm;C:\Applic\Ide\Netbeans\oracleInstaClient\vc10;C:\Applic\Ide\Netbeans\oracleInstaClient;C:\Applic\Ide\Netbeans\vscode;C:\Applic\Ide\Netbeans\python27;C:\Applic\Ide\Netbeans\nodejs\node_modules\gml\build;C:\Applic\Ide\Netbeans\git\usr\bin\vendor_perl;C:\Applic\Ide\Netbeans\git\usr\bin\core_perl
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\ndany\bin;C:\Users\ndany\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\ndany\bin;C:\Program Files\ConEmu\ConEmu\Scripts;C:\Program Files\ConEmu;C:\Program Files\ConEmu\ConEmu;C:\Program Files\Docker\Docker\Resources\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files (x86)\PuTTY;C:\Program Files\nodejs;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\ndany\AppData\Roaming\npm;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
 
 Yarn version: 
   0.16.1
 
 Node version: 
-  6.9.1
+  6.3.1
 
 Platform: 
   win32 x64
@@ -46,6 +46,7 @@ npm manifest:
       "gulp-copy": "^0.0.2",
       "gulp-load-plugins": "^1.4.0",
       "gulp-util": "^3.0.7",
+      "gulp-watch": "^4.3.10",
       "node-bumper": "^0.1.26",
       "source-map-support": "^0.4.5",
       "ts-loader": "^0.9.5",
@@ -466,7 +467,7 @@ Lockfile:
       strip-ansi "^3.0.0"
       supports-color "^2.0.0"
   
-  chokidar@^1.1.0, chokidar@^1.4.3:
+  chokidar@^1.1.0, chokidar@^1.4.3, chokidar@^1.5.2:
     version "1.6.1"
     resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-1.6.1.tgz#2f4447ab5e96e50fb3d789fd90d4c72e0e4c70c2"
     dependencies:
@@ -935,6 +936,12 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/first-chunk-stream/-/first-chunk-stream-1.0.0.tgz#59bfb50cd905f60d7c394cd3d9acaab4e6ad934e"
   
+  first-chunk-stream@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/first-chunk-stream/-/first-chunk-stream-2.0.0.tgz#1bdecdb8e083c0664b91945581577a43a9f31d70"
+    dependencies:
+      readable-stream "^2.0.2"
+  
   flagged-respawn@^0.3.2:
     version "0.3.2"
     resolved "https://registry.yarnpkg.com/flagged-respawn/-/flagged-respawn-0.3.2.tgz#ff191eddcd7088a675b2610fffc976be9b8074b5"
@@ -1242,7 +1249,7 @@ Lockfile:
       through2 "^2.0.0"
       vinyl "^1.0.0"
   
-  gulp-util:
+  gulp-util, gulp-util@^3.0.6:
     version "3.0.7"
     resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-3.0.7.tgz#78925c4b8f8b49005ac01a011c557e6218941cbb"
     dependencies:
@@ -1277,6 +1284,20 @@ Lockfile:
       multipipe "^0.1.0"
       through2 "^0.5.0"
       vinyl "^0.2.1"
+  
+  gulp-watch:
+    version "4.3.10"
+    resolved "https://registry.yarnpkg.com/gulp-watch/-/gulp-watch-4.3.10.tgz#776920ab54595c95f3597fb5444e61fc7bbd58a3"
+    dependencies:
+      anymatch "^1.3.0"
+      chokidar "^1.5.2"
+      glob-parent "^3.0.0"
+      gulp-util "^3.0.6"
+      object-assign "^4.1.0"
+      path-is-absolute "^1.0.0"
+      readable-stream "^2.0.1"
+      vinyl "^1.2.0"
+      vinyl-file "^2.0.0"
   
   "gulp@github:gulpjs/gulp#4.0":
     version "4.0.0-alpha.2"
@@ -2399,7 +2420,7 @@ Lockfile:
     dependencies:
       create-hmac "^1.1.2"
   
-  pify@^2.0.0:
+  pify@^2.0.0, pify@^2.3.0:
     version "2.3.0"
     resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
   
@@ -2834,6 +2855,13 @@ Lockfile:
       first-chunk-stream "^1.0.0"
       strip-bom "^2.0.0"
   
+  strip-bom-stream@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/strip-bom-stream/-/strip-bom-stream-2.0.0.tgz#f87db5ef2613f6968aa545abfe1ec728b6a829ca"
+    dependencies:
+      first-chunk-stream "^2.0.0"
+      strip-bom "^2.0.0"
+  
   strip-bom@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/strip-bom/-/strip-bom-2.0.0.tgz#6219a85616520491f35788bdbf1447a99c7e6b0e"
@@ -3087,6 +3115,17 @@ Lockfile:
     dependencies:
       extsprintf "1.0.2"
   
+  vinyl-file@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/vinyl-file/-/vinyl-file-2.0.0.tgz#a7ebf5ffbefda1b7d18d140fcb07b223efb6751a"
+    dependencies:
+      graceful-fs "^4.1.2"
+      pify "^2.3.0"
+      pinkie-promise "^2.0.0"
+      strip-bom "^2.0.0"
+      strip-bom-stream "^2.0.0"
+      vinyl "^1.1.0"
+  
   vinyl-fs@^2.0.0:
     version "2.4.4"
     resolved "https://registry.yarnpkg.com/vinyl-fs/-/vinyl-fs-2.4.4.tgz#be6ff3270cb55dfd7d3063640de81f25d7532239"
@@ -3123,7 +3162,7 @@ Lockfile:
       clone-stats "^0.0.1"
       replace-ext "0.0.1"
   
-  vinyl@^1.0.0:
+  vinyl@^1.0.0, vinyl@^1.1.0, vinyl@^1.2.0:
     version "1.2.0"
     resolved "https://registry.yarnpkg.com/vinyl/-/vinyl-1.2.0.tgz#5c88036cf565e5df05558bfc911f8656df218884"
     dependencies:
@@ -3309,5 +3348,5 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: ENOENT: no such file or directory, open 'C:\Users\ndanyuzwe.g\Desktop\nodecode\neo4j-driver-definitions\node_modules\@types\chalk\index.d.ts'
+  Error: ENOENT: no such file or directory, open 'C:\Users\ndany\web\neo4j-driver-definitions\node_modules\@types\chalk\package.json'
       at Error (native)

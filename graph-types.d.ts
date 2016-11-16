@@ -2,13 +2,17 @@
  * Class for Node Type.
  */ 
 export declare class Node {
+    public identity: number;
+    public labels: string[];
+    public properties: Object;
     /**
      * @constructor
      * @param {string} identity - Unique identity
      * @param {Array} labels - Array for all labels
      * @param {Object} properties - Map with node properties
      */
-    constructor(identity: string, labels: string[], properties: any);
+    constructor(identity: number, labels: string[], properties: Object);
+
 
     toString(): string;
 
@@ -18,6 +22,11 @@ export declare class Node {
  * Class for Relationship Type.
  */
 export declare class Relationship {
+    identity: number;
+    start: Node;
+    end: Node;
+    type: string;
+    properties: Object;
     /**
      * @constructor
      * @param {string} identity - Unique identity
@@ -64,6 +73,8 @@ export declare class PathSegment {
      */
     constructor(start: string, rel: Relationship, end: string);
 }
+
+
 
 /**
  * Class for Path Type.

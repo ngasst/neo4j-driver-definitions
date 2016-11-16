@@ -5,10 +5,10 @@
 // Documentation : https://neo4j.com/docs/api/javascript-driver/current/
 /// <reference types='node' />
 /// <reference types='ws' />
-
 declare module "neo4j-driver" {
 import * as WebSocket from 'ws';
 import { Subscription } from '@reactivex/rxjs';
+
 
 ///internal/buf.d.ts
 
@@ -314,8 +314,7 @@ export class NodeBuffer extends BaseBuffer {
   export function alloc(size: number): any;
 
 ///internal/ch-node.d.ts
-
- class NodeChannel {
+ class NodeChannel {
     /**
      * Create new instance
      * @param {Object} opts - Options object
@@ -513,8 +512,7 @@ export function parseUrl(url: string): string;
 ///internal/features.d.ts
 
 export function hasFeature(name: string): FEATURES;
-
- interface FEATURES {
+ interface FEATURES {
     trust_on_first_use: () => boolean;
 }
 
@@ -744,8 +742,7 @@ export class Driver {
   session(mode?: string): Session;
 }
 
-/** Internal stream observer used for connection state */
- class _ConnectionStreamObserver extends StreamObserver {
+/** Internal stream observer used for connection state */ class _ConnectionStreamObserver extends StreamObserver {
     constructor(driver: Driver);
 
     onError(error: Error): void;
@@ -771,13 +768,17 @@ export let SESSION_EXPIRED: string;
  * Class for Node Type.
  */ 
 export class Node {
+    public identity: number;
+    public labels: string[];
+    public properties: Object;
     /**
      * @constructor
      * @param {string} identity - Unique identity
      * @param {Array} labels - Array for all labels
      * @param {Object} properties - Map with node properties
      */
-    constructor(identity: string, labels: string[], properties: any);
+    constructor(identity: number, labels: string[], properties: Object);
+
 
     toString(): string;
 
@@ -787,6 +788,11 @@ export class Node {
  * Class for Relationship Type.
  */
 export class Relationship {
+    identity: number;
+    start: Node;
+    end: Node;
+    type: string;
+    properties: Object;
     /**
      * @constructor
      * @param {string} identity - Unique identity
@@ -803,8 +809,7 @@ export class Relationship {
 /**
  * Class for UnboundRelationship Type.
  * @access private
- */ 
- class UnboundRelationship {
+ */  class UnboundRelationship {
     /**
      * @constructor
      * @param {string} identity - Unique identity
@@ -833,6 +838,8 @@ export class PathSegment {
      */
     constructor(start: string, rel: Relationship, end: string);
 }
+
+
 
 /**
  * Class for Path Type.
@@ -1607,30 +1614,25 @@ export class Transaction {
     
 }
 
-/** Internal stream observer used for transactional results*/
- class _TransactionStreamObserver extends StreamObserver {
+/** Internal stream observer used for transactional results*/ class _TransactionStreamObserver extends StreamObserver {
     constructor(tx: any);
 
     onError(error: any|Error): void;
 }
-
- interface States {
+ interface States {
     ACTIVE: State;
     FAILED: State;
     SUCCEDED: State;
     ROLLED_BACK: State;
 }
-
- interface State {
+ interface State {
     commit: (conn: any, observer: _TransactionStreamObserver) => StateResult;
     rollback: (conn: any, observer: _TransactionStreamObserver) => StateResult;
     run: (conn: any, observer: _TransactionStreamObserver, statement: string|any, parameters: any) => StateResult;
 }
-
- interface StateResult {
+ interface StateResult {
     result: Result;
     state: State;
 }
-
- function _runDiscardAll(msg: string, conn: any, observer: _TransactionStreamObserver): Result;
+ function _runDiscardAll(msg: string, conn: any, observer: _TransactionStreamObserver): Result;
 }
